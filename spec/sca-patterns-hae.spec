@@ -11,6 +11,7 @@
 %define patuser root
 %define patgrp root
 %define patdir /var/opt/%{produser}/patterns
+%define mode 544
 %define category HAE
 
 Name:         sca-patterns-hae
@@ -45,14 +46,14 @@ Authors:
 pwd;ls -la
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/%{patdir}/%{category}
-install -m 544 patterns/%{category}/* $RPM_BUILD_ROOT/%{patdir}/%{category}
+install -m %{mode} patterns/%{category}/* $RPM_BUILD_ROOT/%{patdir}/%{category}
 
 %files
 %defattr(-,%{patuser},%{patgrp})
 %dir /var/opt/%{produser}
 %dir %{patdir}
 %dir %{patdir}/%{category}
-%attr(555,%{patuser},%{patgrp}) %{patdir}/%{category}/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT

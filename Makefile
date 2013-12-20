@@ -78,9 +78,9 @@ push:
 help:
 	@clear
 	@echo Make options for package: $(OBSPACKAGE)
-	@echo make [COMMAND]
+	@echo make [TARGETS]
 	@echo
-	@echo COMMAND
+	@echo TARGETS
 	@echo ' clean      Uninstalls build directory and cleans up build files'
 	@echo ' install    Installs source files to the build directory'
 	@echo ' uninstall  Removes files from the build directory'

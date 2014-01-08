@@ -16,10 +16,11 @@
 
 Name:         sca-patterns-hae
 Summary:      Supportconfig Analysis Patterns for HAE
+URL:          https://bitbucket.org/g23guy/sca-patterns-hae
 Group:        Documentation/SuSE
 Distribution: SUSE Linux Enterprise
 Vendor:       SUSE Support
-License:      GPLv2
+License:      GPL-2.0
 Autoreqprov:  on
 Version:      1.2
 Release:      1

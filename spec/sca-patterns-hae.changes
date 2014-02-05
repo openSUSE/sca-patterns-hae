@@ -1,0 +1,16 @@
+-------------------------------------------------------------------
+Fri Jan 31 19:37:14 UTC 2014 - jrecord@suse.com
+
+- includes pertinent patterns from sca-patterns-basic
+- moved patterns from own directory to SLE structure
+
+-------------------------------------------------------------------
+Thu Jan 16 09:34:28 MST 2014 jrecord@suse.com
+
+- relocated files according to FHS
+
+-------------------------------------------------------------------
+Wed Dec 20 09:34:28 MST 2013 jrecord@suse.com
+
+- separated as individual RPM package
+

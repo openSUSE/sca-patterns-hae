@@ -1,6 +1,7 @@
 -------------------------------------------------------------------
-Thu Mar 13 17:28:52 UTC 2014 - jrecord@suse.com
+Thu Mar 20 15:48:20 UTC 2014 - jrecord@suse.com
 
+- Removed duplicates with fdupes
 - Fixed FSF address in all patterns
 - Change to System/Monitoring spec Group
 

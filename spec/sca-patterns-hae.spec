@@ -16,6 +16,7 @@
 %define patgrp root
 %define mode 544
 %define category SLE
+%define fdupes
 
 Name:         sca-patterns-hae
 Summary:      Supportconfig Analysis Patterns for HAE
@@ -24,9 +25,10 @@ Group:        System/Monitoring
 License:      GPL-2.0
 Autoreqprov:  on
 Version:      1.3
-Release:      5
+Release:      6
 Source:       %{name}-%{version}.tar.gz
 BuildRoot:    %{_tmppath}/%{name}-%{version}
+BuildRequires: fdupes
 Buildarch:    noarch
 Requires:     sca-patterns-base
 
@@ -53,6 +55,7 @@ install -d $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
 install -m 444 patterns/COPYING.GPLv2 $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
 install -m %{mode} patterns/HAE/* $RPM_BUILD_ROOT/%{patdir}/%{category}/sle10all
 install -m %{mode} patterns/HAE/* $RPM_BUILD_ROOT/%{patdir}/%{category}/sle11all
+%fdupes %{buildroot}
 
 %files
 %defattr(-,%{patuser},%{patgrp})

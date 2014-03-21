@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Fri Mar 21 18:13:58 UTC 2014 - jrecord@suse.com
+
+- Fixed spec file macro
+
+-------------------------------------------------------------------
 Thu Mar 20 15:48:20 UTC 2014 - jrecord@suse.com
 
 - Removed duplicates with fdupes

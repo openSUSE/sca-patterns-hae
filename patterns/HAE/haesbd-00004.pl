@@ -2,10 +2,10 @@
 
 # Title:       SBD Partition Metadata Mismatch
 # Description: All SBD partition dump metadata must match
-# Modified:    2013 Jun 21
-
+# Modified:    2014 Apr 23
+#
 ##############################################################################
-#  Copyright (C) 2013 SUSE LLC
+#  Copyright (C) 2014 SUSE LLC
 ##############################################################################
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -49,7 +49,7 @@ use SDP::SUSE;
 	"META_LINK_TID=http://www.suse.com/support/kb/doc.php?id=7010933"
 );
 
-
+my $FAIL_STR = '';
 
 
 ##############################################################################
@@ -78,9 +78,16 @@ sub sbdMetaMismatch {
 					if ( @META && $LOADED ) {
 						SDP::Core::printDebug(" SRC", "$META[$I]");
 						SDP::Core::printDebug(" CMP", "$_");
-						if ( "$META[$I]" ne "$_") {
-							SDP::Core::printDebug("  Failed", "Comparison");
+						if ( $_ =~ m/UUID|Header version/i ) {
+							SDP::Core::printDebug("  Skip", "Comparison Skipped");
+						} elsif ( "$META[$I]" ne "$_") {
+							SDP::Core::printDebug("  FAILED", "Comparison");
 							$RCODE++;
+							if ( m/shared storage fencing tool/i ) {
+								$FAIL_STR = "SBD Syntax Error";
+							} else {
+								$FAIL_STR = $_;
+							}
 							last;
 						}
 						$I++;
@@ -111,9 +118,9 @@ sub sbdMetaMismatch {
 
 SDP::Core::processOptions();
 	if ( sbdMetaMismatch() ) {
-		SDP::Core::updateStatus(STATUS_CRITICAL, "Detected SBD Partition Metadata Mismatch");
+		SDP::Core::updateStatus(STATUS_CRITICAL, "Detected SBD Partition Metadata Mismatch: $FAIL_STR");
 	} else {
-		SDP::Core::updateStatus(STATUS_ERROR, "SBD Partition Metadata Matches");
+		SDP::Core::updateStatus(STATUS_IGNORE, "SBD Partition Metadata Matches");
 	}
 SDP::Core::printPatternResults();
 

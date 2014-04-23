@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Wed Apr 23 16:34:41 UTC 2014 - jrecord@suse.com
+
+- Fixed haesbd-00004.pl false mismatch on UUID (bnc#867828)
+
+-------------------------------------------------------------------
 Fri Mar 21 18:13:58 UTC 2014 - jrecord@suse.com
 
 - Fixed spec file macro

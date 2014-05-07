@@ -5,7 +5,9 @@
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
-
+# Source developed at:
+#  https://github.com/g23guy/sca-patterns-hae
+#
 # norootforbuild
 # neededforbuild
 
@@ -19,12 +21,12 @@
 
 Name:         sca-patterns-hae
 Summary:      Supportconfig Analysis Patterns for HAE
-URL:          https://bitbucket.org/g23guy/sca-patterns-hae
+URL:          https://github.com/g23guy/sca-patterns-hae
 Group:        System/Monitoring
 License:      GPL-2.0
 Autoreqprov:  on
 Version:      1.3
-Release:      8
+Release:      8.1
 Source:       %{name}-%{version}.tar.gz
 BuildRoot:    %{_tmppath}/%{name}-%{version}
 BuildRequires: fdupes

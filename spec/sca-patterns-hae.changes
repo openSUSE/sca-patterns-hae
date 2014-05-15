@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Thu May 15 16:46:47 UTC 2014 - jrecord@suse.com
+
+- Fixed argument isn't numeric in stop-00001.pl
+
+-------------------------------------------------------------------
 Wed Apr 23 16:34:41 UTC 2014 - jrecord@suse.com
 
 - Fixed haesbd-00004.pl false mismatch on UUID (bnc#867828)

@@ -2,10 +2,10 @@
 
 # Title:       Resource stop failure delay
 # Description: Cluster resource failing on stop take too long to recover
-# Modified:    2013 Jun 21
+# Modified:    2014 May 15
 
 ##############################################################################
-#  Copyright (C) 2013 SUSE LLC
+#  Copyright (C) 2014 SUSE LLC
 ##############################################################################
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -92,6 +92,7 @@ sub getOperationDefTimeout {
 					if ( $PART =~ m/^value/i ) {
 						$PART =~ s/"|'|\s*|\/|<|>//g; # remove quotes and white space
 						(undef, $RCODE) = split(/=/, $PART);
+						$RCODE =~ s/\D+//g; #remove non-digit characters
 					}
 				}
 				last;

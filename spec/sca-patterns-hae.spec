@@ -17,7 +17,7 @@
 %define patuser root
 %define patgrp root
 %define mode 544
-%define category SLE
+%define category HAE
 
 Name:         sca-patterns-hae
 Summary:      Supportconfig Analysis Patterns for HAE
@@ -26,7 +26,7 @@ Group:        System/Monitoring
 License:      GPL-2.0
 Autoreqprov:  on
 Version:      1.3
-Release:      9
+Release:      10
 Source:       %{name}-%{version}.tar.gz
 BuildRoot:    %{_tmppath}/%{name}-%{version}
 BuildRequires: fdupes

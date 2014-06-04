@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Wed Jun  4 19:45:49 UTC 2014 - jrecord@suse.com
+
+- Moved from SLE to HAE category
+
+-------------------------------------------------------------------
 Thu May 15 16:46:47 UTC 2014 - jrecord@suse.com
 
 - Fixed argument isn't numeric in stop-00001.pl

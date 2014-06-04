@@ -1,7 +1,8 @@
 -------------------------------------------------------------------
-Wed Jun  4 19:45:49 UTC 2014 - jrecord@suse.com
+Wed Jun  4 20:10:25 UTC 2014 - jrecord@suse.com
 
 - Moved from SLE to HAE category
+- Moved pattern structure to HAE only
 
 -------------------------------------------------------------------
 Thu May 15 16:46:47 UTC 2014 - jrecord@suse.com

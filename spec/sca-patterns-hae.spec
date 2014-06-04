@@ -26,7 +26,7 @@ Group:        System/Monitoring
 License:      GPL-2.0
 Autoreqprov:  on
 Version:      1.3
-Release:      10
+Release:      11
 Source:       %{name}-%{version}.tar.gz
 BuildRoot:    %{_tmppath}/%{name}-%{version}
 BuildRequires: fdupes
@@ -50,12 +50,10 @@ Authors:
 %install
 pwd;ls -la
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/sle10all
-install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/sle11all
+install -d $RPM_BUILD_ROOT/%{patdir}/%{category}
 install -d $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
 install -m 444 patterns/COPYING.GPLv2 $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
-install -m %{mode} patterns/HAE/* $RPM_BUILD_ROOT/%{patdir}/%{category}/sle10all
-install -m %{mode} patterns/HAE/* $RPM_BUILD_ROOT/%{patdir}/%{category}/sle11all
+install -m %{mode} patterns/HAE/* $RPM_BUILD_ROOT/%{patdir}/%{category}
 %fdupes %{buildroot}
 
 %files
@@ -63,12 +61,9 @@ install -m %{mode} patterns/HAE/* $RPM_BUILD_ROOT/%{patdir}/%{category}/sle11all
 %dir %{patdirbase}
 %dir %{patdir}
 %dir %{patdir}/%{category}
-%dir %{patdir}/%{category}/sle10all
-%dir %{patdir}/%{category}/sle11all
 %dir /usr/share/doc/packages/%{sca_common}
 %doc %attr(-,root,root) /usr/share/doc/packages/%{sca_common}/*
-%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle10all/*
-%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle11all/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT

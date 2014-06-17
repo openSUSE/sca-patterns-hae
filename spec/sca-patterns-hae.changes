@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jun 17 21:51:12 UTC 2014 - jrecord@suse.com
+
+- New Pattern
+  corosync-7015215.py
+
+-------------------------------------------------------------------
 Wed Jun  4 20:10:25 UTC 2014 - jrecord@suse.com
 
 - Moved from SLE to HAE category

@@ -1,7 +1,9 @@
 -------------------------------------------------------------------
-Tue Jun 17 21:51:12 UTC 2014 - jrecord@suse.com
+Wed Jun 18 22:03:22 UTC 2014 - jrecord@suse.com
 
-- New Pattern
+- New Patterns
+  bindnetaddr-7015225.py
+  mcastport-7015225.py
   corosync-7015215.py
 
 -------------------------------------------------------------------

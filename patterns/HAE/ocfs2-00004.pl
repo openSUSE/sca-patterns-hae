@@ -68,12 +68,17 @@ sub readOnlyOCFS2 {
 	if ( SDP::Core::getSection($FILE_OPEN, $SECTION, \@CONTENT) ) {
 		foreach $_ (@CONTENT) {
 			next if ( m/^\s*$/ ); # Skip blank lines
-			if ( /^(\S*) on .*type ocfs2/ ) {
+			if ( /^(\S*) on .*type ocfs2 \((.*)\)/ ) {
 				my $OCFS_DEV = $1;
+				my @OCFS_PARAMS = split(',', $2);
+				my $PARAM = '';
 				$OCFS = 1;
-				if ( /.*\(.*ro,|.*,ro\)/ ) {
-					SDP::Core::printDebug("PUSH", $OCFS_DEV);
-					push(@$ARRAY_REF, $OCFS_DEV);
+				foreach $PARAM (@OCFS_PARAMS) {
+					if ( "$PARAM" eq "ro" ) {
+						SDP::Core::printDebug("PUSH", $OCFS_DEV);
+						push(@$ARRAY_REF, $OCFS_DEV);
+						last;
+					}
 				}
 			}
 		}

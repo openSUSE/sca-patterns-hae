@@ -2,10 +2,10 @@
 
 # Title:       Missing STONITH resource
 # Description: Checks for missing STONITH resources
-# Modified:    2013 Jun 21
+# Modified:    2019 Jun 25
 
 ##############################################################################
-#  Copyright (C) 2013 SUSE LLC
+#  Copyright (C) 2013-2019 SUSE LLC
 ##############################################################################
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 #  along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 #  Authors/Contributors:
-#   Jason Record (jrecord@suse.com)
+#   Jason Record (jason.record@suse.com)
 
 ##############################################################################
 
@@ -81,7 +81,7 @@ sub checkStonithResource {
 			if ( /<\/primitive>/i ) {
 				SDP::Core::printDebug('RESOURCE', "Found");
 				$RESOURCES++;
-			} elsif ( /<primitive class="stonith"/i ) {
+			} elsif ( /<primitive.*class="stonith"/i ) {
 				SDP::Core::printDebug('STONITH RESOURCE', "Found");
 				$STONITH_RESOURCE = 1;
 			} elsif ( /<nvpair.*name="stonith-enabled".*value="false"/i ) {

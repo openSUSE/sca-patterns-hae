@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Title:       Check for unique mcastports
 # Description: Troubleshooting HAE Cluster Membership
@@ -65,10 +65,10 @@ try:
 			# The address is not a duplicate, add it to the list of bind net addresses to check
 			MCASTPORT[ADDR] = True
 	if( len(DUP_MCASTPORT) > 0 ):
-		Core.updateStatus(Core.REC, "Detected Duplicate Corosync Multicast Port Addresses: " + " ".join(DUP_MCASTPORT.keys()))
+		Core.updateStatus(Core.REC, "Detected Duplicate Corosync Multicast Port Addresses: " + " ".join(list(DUP_MCASTPORT.keys())))
 	else:
 		Core.updateStatus(Core.IGNORE, "All Corosync Multicast Port Addresses are Unique")
-except Exception, error:
+except Exception as error:
 	Core.updateStatus(Core.ERROR, "Corosync configuration error: " + str(error))
 
 Core.printPatternResults()

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Title:       Check for unique bind addresses
 # Description: Troubleshooting HAE Cluster Membership
@@ -65,10 +65,10 @@ try:
 			# The address is not a duplicate, add it to the list of bind net addresses to check
 			BINDADDRS[ADDR] = True
 	if( len(DUP_BINDADDRS) > 0 ):
-		Core.updateStatus(Core.CRIT, "Detected Duplicate Corosync Bind Addresses: " + " ".join(DUP_BINDADDRS.keys()))
+		Core.updateStatus(Core.CRIT, "Detected Duplicate Corosync Bind Addresses: " + " ".join(list(DUP_BINDADDRS.keys())))
 	else:
 		Core.updateStatus(Core.IGNORE, "All Corosync Bind Addresses are Unique")
-except Exception, error:
+except Exception as error:
 	Core.updateStatus(Core.ERROR, "Corosync configuration error: " + str(error))
 
 Core.printPatternResults()

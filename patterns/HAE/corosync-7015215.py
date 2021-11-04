@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Title:       Invalid Corosync Consensus
 # Description: Odd cluster membership changes in HAE cluster

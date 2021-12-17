@@ -21,7 +21,7 @@
 %define category HAE
 
 Name:         sca-patterns-hae
-Version:      1.5.0
+Version:      1.5.1
 Release:      0
 Summary:      Supportconfig Analysis Patterns for HAE
 License:      GPL-2.0
@@ -30,6 +30,7 @@ Group:        System/Monitoring
 Source:       %{name}-%{version}.tar.gz
 BuildRequires: fdupes
 Requires:     sca-patterns-base >= 1.5.0
+Requires:     sca-server-report >= 1.5.1
 Buildarch:    noarch
 
 %description

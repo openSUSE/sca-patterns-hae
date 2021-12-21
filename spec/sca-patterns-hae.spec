@@ -48,7 +48,47 @@ See %{_docdir}/sca-patterns-base/COPYING.GPLv2
 %install
 pwd;ls -la
 install -d %{buildroot}/%{patdir}/%{category}
-install -m %{mode} patterns/HAE/* %{buildroot}/%{patdir}/%{category}
+install -d %{buildroot}/%{patdir}/%{category}/hae11all
+install -d %{buildroot}/%{patdir}/%{category}/hae11sp0
+install -d %{buildroot}/%{patdir}/%{category}/hae11sp1
+install -d %{buildroot}/%{patdir}/%{category}/hae11sp2
+install -d %{buildroot}/%{patdir}/%{category}/hae11sp3
+install -d %{buildroot}/%{patdir}/%{category}/hae11sp4
+install -m %{mode} patterns/%{category}/hae11all/* %{buildroot}/%{patdir}/%{category}/hae11all
+install -m %{mode} patterns/%{category}/hae11sp0/* %{buildroot}/%{patdir}/%{category}/hae11sp0
+install -m %{mode} patterns/%{category}/hae11sp1/* %{buildroot}/%{patdir}/%{category}/hae11sp1
+install -m %{mode} patterns/%{category}/hae11sp2/* %{buildroot}/%{patdir}/%{category}/hae11sp2
+install -m %{mode} patterns/%{category}/hae11sp3/* %{buildroot}/%{patdir}/%{category}/hae11sp3
+install -m %{mode} patterns/%{category}/hae11sp4/* %{buildroot}/%{patdir}/%{category}/hae11sp4
+
+install -d %{buildroot}/%{patdir}/%{category}/hae12all
+install -d %{buildroot}/%{patdir}/%{category}/hae12sp0
+install -d %{buildroot}/%{patdir}/%{category}/hae12sp1
+install -d %{buildroot}/%{patdir}/%{category}/hae12sp2
+install -d %{buildroot}/%{patdir}/%{category}/hae12sp3
+install -d %{buildroot}/%{patdir}/%{category}/hae12sp4
+install -d %{buildroot}/%{patdir}/%{category}/hae12sp5
+install -m %{mode} patterns/%{category}/hae12all/* %{buildroot}/%{patdir}/%{category}/hae12all
+install -m %{mode} patterns/%{category}/hae12sp0/* %{buildroot}/%{patdir}/%{category}/hae12sp0
+install -m %{mode} patterns/%{category}/hae12sp1/* %{buildroot}/%{patdir}/%{category}/hae12sp1
+install -m %{mode} patterns/%{category}/hae12sp2/* %{buildroot}/%{patdir}/%{category}/hae12sp2
+install -m %{mode} patterns/%{category}/hae12sp3/* %{buildroot}/%{patdir}/%{category}/hae12sp3
+install -m %{mode} patterns/%{category}/hae12sp4/* %{buildroot}/%{patdir}/%{category}/hae12sp4
+install -m %{mode} patterns/%{category}/hae12sp5/* %{buildroot}/%{patdir}/%{category}/hae12sp5
+
+install -d %{buildroot}/%{patdir}/%{category}/hae15all
+install -d %{buildroot}/%{patdir}/%{category}/hae15sp0
+install -d %{buildroot}/%{patdir}/%{category}/hae15sp1
+install -d %{buildroot}/%{patdir}/%{category}/hae15sp2
+install -d %{buildroot}/%{patdir}/%{category}/hae15sp3
+install -d %{buildroot}/%{patdir}/%{category}/hae15sp4
+install -m %{mode} patterns/%{category}/hae15all/* %{buildroot}/%{patdir}/%{category}/hae15all
+install -m %{mode} patterns/%{category}/hae15sp0/* %{buildroot}/%{patdir}/%{category}/hae15sp0
+install -m %{mode} patterns/%{category}/hae15sp1/* %{buildroot}/%{patdir}/%{category}/hae15sp1
+install -m %{mode} patterns/%{category}/hae15sp2/* %{buildroot}/%{patdir}/%{category}/hae15sp2
+install -m %{mode} patterns/%{category}/hae15sp3/* %{buildroot}/%{patdir}/%{category}/hae15sp3
+install -m %{mode} patterns/%{category}/hae15sp4/* %{buildroot}/%{patdir}/%{category}/hae15sp4
+
 %fdupes %{buildroot}
 
 %files
@@ -56,7 +96,64 @@ install -m %{mode} patterns/HAE/* %{buildroot}/%{patdir}/%{category}
 %dir %{patdirbase}
 %dir %{patdir}
 %dir %{patdir}/%{category}
-%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/*
+%dir %{patdir}/%{category}/hae11all
+%dir %{patdir}/%{category}/hae11sp0
+%dir %{patdir}/%{category}/hae11sp1
+%dir %{patdir}/%{category}/hae11sp2
+%dir %{patdir}/%{category}/hae11sp3
+%dir %{patdir}/%{category}/hae11sp4
+%dir %{patdir}/%{category}/hae12all
+%dir %{patdir}/%{category}/hae12sp0
+%dir %{patdir}/%{category}/hae12sp1
+%dir %{patdir}/%{category}/hae12sp2
+%dir %{patdir}/%{category}/hae12sp3
+%dir %{patdir}/%{category}/hae12sp4
+%dir %{patdir}/%{category}/hae12sp5
+%dir %{patdir}/%{category}/hae15all
+%dir %{patdir}/%{category}/hae15sp0
+%dir %{patdir}/%{category}/hae15sp1
+%dir %{patdir}/%{category}/hae15sp2
+%dir %{patdir}/%{category}/hae15sp3
+%dir %{patdir}/%{category}/hae15sp4
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae11all/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp0/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp1/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp2/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp3/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp4/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae12all/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp0/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp1/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp2/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp3/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp4/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp5/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae15all/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp0/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp1/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp2/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp3/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp4/*
+
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp0/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp1/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp2/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp3/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae11sp4/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae12all/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp0/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp1/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp2/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp3/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp4/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae12sp5/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15all/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp0/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp1/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp2/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp3/*README
+%attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp4/*README
+
 
 %changelog
 

@@ -2,10 +2,10 @@
 
 # Title:       OCFS2 Partition Fails to Mount with No Free Slots Error
 # Description: Checks for errors relating to available slots
-# Modified:    2013 Jun 21
+# Modified:    2022 Oct 25
 
 ##############################################################################
-#  Copyright (C) 2013 SUSE LLC
+#  Copyright (C) 2013, 2022 SUSE LLC
 ##############################################################################
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -22,7 +22,7 @@
 #
 
 #  Authors/Contributors:
-#   Jason Record (jrecord@suse.com)
+#   Jason Record <jason.record@suse.com>
 
 ##############################################################################
 
@@ -49,7 +49,7 @@ use SDP::SUSE;
 	PROPERTY_NAME_OVERALL."=$GSTATUS",
 	PROPERTY_NAME_OVERALL_INFO."=None",
 	"META_LINK_TID=http://www.suse.com/support/kb/doc.php?id=7005236",
-	"META_LINK_BUG=https://bugzilla.novell.com/show_bug.cgi?id=570358"
+	"META_LINK_BUG=https://bugzilla.suse.com/show_bug.cgi?id=570358"
 );
 
 

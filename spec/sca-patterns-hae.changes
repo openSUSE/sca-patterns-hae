@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Oct 25 18:34:04 UTC 2022 - jason.record@suse.com
+
+- Changes to version 1.5.2
+  + Removed invalid patterns
+  + Updated or removed invalid solution links in patterns
+
+-------------------------------------------------------------------
 Tue Mar  8 17:16:56 UTC 2022 - Jason Record <jason.record@suse.com>
 
 - More updates to version 1.5.1

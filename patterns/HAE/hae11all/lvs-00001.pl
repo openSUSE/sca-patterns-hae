@@ -2,10 +2,10 @@
 
 # Title:       Recommnended Reading for LVS
 # Description: Cool solution article for LVS example
-# Modified:    2013 Jun 21
+# Modified:    2022 Oct 25
 
 ##############################################################################
-#  Copyright (C) 2013 SUSE LLC
+#  Copyright (C) 2013,2022 SUSE LLC
 ##############################################################################
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 #  along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 #  Authors/Contributors:
-#   Jason Record (jrecord@suse.com)
+#   Jason Record (jason.record@suse.com)
 
 ##############################################################################
 
@@ -46,7 +46,7 @@ use SDP::SUSE;
 	PROPERTY_NAME_PRIMARY_LINK."=META_LINK_TID",
 	PROPERTY_NAME_OVERALL."=$GSTATUS",
 	PROPERTY_NAME_OVERALL_INFO."=None",
-	"META_LINK_CoolSolution=http://www.novell.com/communities/node/12621/load-balancing-smt-servers-sles11-sp1-hae-cluster"
+	"META_LINK_Blog=https://www.suse.com/c/load-balancing-smt-servers-sles11-sp1-hae-cluster/"
 );
 
 

@@ -1,4 +1,4 @@
-# 
+#
 # spec file for package sca-patterns-hae
 #
 # Copyright (c) 2024 SUSE LLC
@@ -12,6 +12,10 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
+#
+
+
 %define sca_common sca
 %define patdirbase /usr/lib/%{sca_common}
 %define patdir %{patdirbase}/patterns
@@ -20,18 +24,18 @@
 %define patmode 755
 %define category HAE
 
-Name:         sca-patterns-hae
-Version:      1.5.3
-Release:      0
-Summary:      Supportconfig Analysis Patterns for HAE
-License:      GPL-2.0
-URL:          https://github.com/g23guy/sca-patterns-hae
-Group:        System/Monitoring
-Source:       %{name}-%{version}.tar.gz
-BuildRequires: fdupes
-Requires:     sca-patterns-base >= 1.5.0
-Requires:     sca-server-report >= 1.5.1
-Buildarch:    noarch
+Name:           sca-patterns-hae
+Version:        1.5.3
+Release:        0
+Summary:        Supportconfig Analysis Patterns for HAE
+License:        GPL-2.0-only
+URL:            https://github.com/g23guy/sca-patterns-hae
+Group:          System/Monitoring
+Source:         %{name}-%{version}.tar.gz
+BuildRequires:  fdupes
+Requires:       sca-patterns-base >= 1.5.0
+Requires:       sca-server-report >= 1.5.1
+BuildArch:      noarch
 
 %description
 Supportconfig Analysis (SCA) appliance patterns to identify known
@@ -154,6 +158,4 @@ install -m %{patmode} patterns/%{category}/hae15sp4/* %{buildroot}/%{patdir}/%{c
 %attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp3/*README
 %attr(444,%{patuser},%{patgrp}) %{patdir}/%{category}/hae15sp4/*README
 
-
 %changelog
-
